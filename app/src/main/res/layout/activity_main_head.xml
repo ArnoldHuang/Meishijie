@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#fff">
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/home_camera"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#cbe4dbdb"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="菜谱名、食材名"
+        android:textColor="#b1a8a8"
+        android:layout_margin="2dp"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/topsearch_icon"
+        />
+    
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/new_mail_5"/>
+    
+</LinearLayout>

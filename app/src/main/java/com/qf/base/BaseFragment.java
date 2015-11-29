@@ -57,6 +57,12 @@ public abstract class BaseFragment extends Fragment{
 
     }
 
+    /**
+     * 初始化执行方法
+     * @param view
+     */
+    protected abstract void init(View view);
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -70,8 +76,10 @@ public abstract class BaseFragment extends Fragment{
         if (!injected) {
             x.view().inject(this, this.getView());
         }
+        init(view);
         loadDatas();
     }
+
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
