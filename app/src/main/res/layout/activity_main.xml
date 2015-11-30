@@ -1,17 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include layout="@layout/activity_main_head"/>
-
-    <ScrollView
+    <FrameLayout
+        android:id="@+id/fl_frament_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_tab"
+        />
+
+    
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_recomment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="推荐"
+            android:textSize="10sp"
+            android:drawableTop="@drawable/tab_recomment_select"
+            android:textColor="@color/tab_text_select"
+            android:gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="发现"
+            android:textSize="10sp"
+            android:drawableTop="@drawable/tab_discover_select"
+            android:textColor="@color/tab_text_select"
+            android:gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_shop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="商城"
+            android:textSize="10sp"
+            android:drawableTop="@drawable/tab_shop_select"
+            android:textColor="@color/tab_text_select"
+            android:gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_topic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="食话"
+            android:textSize="10sp"
+            android:drawableTop="@drawable/tab_topic_select"
+            android:textColor="@color/tab_text_select"
+            android:gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_wode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="我的"
+            android:textSize="10sp"
+            android:drawableTop="@drawable/tab_wode_select"
+            android:textColor="@color/tab_text_select"
+            android:gravity="center"
+            />
 
 
-    </ScrollView>
+    </RadioGroup>
 
-</LinearLayout>
+</RelativeLayout>

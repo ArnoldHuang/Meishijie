@@ -43,7 +43,7 @@ public class UniversalUtil {
                 .resetViewBeforeLoading(true)//加载前是否重置View
                 .cacheInMemory(true)//是否启用内存缓存
                 .cacheOnDisk(true)//是否启用磁盘缓存
-                .delayBeforeLoading(1000)//开始加载的延迟时间
+//                .delayBeforeLoading(1000)//开始加载的延迟时间
                 .build();
     }
 

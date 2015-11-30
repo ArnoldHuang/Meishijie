@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- 时间段tab -->
+    <LinearLayout
+        android:id="@+id/ll_timeid"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"/>
+
+
+    <!--导航的ViewPager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_id"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+    <!--缩略图-->
+    <HorizontalScrollView
+        android:id="@+id/hsv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/ll_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
+    </HorizontalScrollView>
+</LinearLayout>

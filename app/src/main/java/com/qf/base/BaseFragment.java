@@ -13,9 +13,9 @@ import org.xutils.x;
 import java.lang.reflect.Method;
 
 /**
- * Fragement基类
+ * Fragement基类 -- 泛型K 为需要传递到该fragment中的类型
  */
-public abstract class BaseFragment extends Fragment{
+public class BaseFragment<K> extends Fragment{
     private boolean injected = false;
 
     /**
@@ -24,14 +24,10 @@ public abstract class BaseFragment extends Fragment{
      * @param <T>
      * @return
      */
-    public static <T extends BaseFragment> T getInstance(Class<T> tClass, Object... obj){
+    public static <T extends BaseFragment> T getInstance(Class<T> tClass){
         T t = null;
         try {
             t = tClass.newInstance();
-            if(obj != null && obj.length > 0){
-                Bundle bundle = t.setDatas(obj);
-                t.setArguments(bundle);
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -39,16 +35,12 @@ public abstract class BaseFragment extends Fragment{
     }
 
     /**
-     * 传递给Fragment参数的方法 -- 由子类重写
-     * @return
+     * 初始化执行方法
+     * @param view
      */
-    public abstract Bundle setDatas(Object... obj);
+    protected void init(View view){
 
-    /**
-     * 获得数据方法 -- 由子类重写
-     * @param bundle
-     */
-    public abstract void getDatas(Bundle bundle);
+    }
 
     /**
      * 加载数据 -- 如果需要加载数据，重写该方法
@@ -58,10 +50,31 @@ public abstract class BaseFragment extends Fragment{
     }
 
     /**
-     * 初始化执行方法
-     * @param view
+     * 需要传递参数时调用该方法
+     * @param ks
+     * @return
      */
-    protected abstract void init(View view);
+    public BaseFragment bindDatas(K... ks){
+        Bundle bundle = setDatas(ks);
+        this.setArguments(bundle);
+        return this;
+    }
+
+    /**
+     * 传递给Fragment参数的方法 -- 由子类重写
+     * @return
+     */
+    public Bundle setDatas(K... ks){
+        return null;
+    }
+
+    /**
+     * 获得数据方法 -- 由子类重写
+     * @param bundle
+     */
+    public void getDatas(Bundle bundle){
+
+    }
 
 
     @Override
@@ -100,11 +113,11 @@ public abstract class BaseFragment extends Fragment{
     /**
      * fragment管理方法
      */
-    public void fragmentManager(int fl_resid, Class fclass, Object... params){
+    public void fragmentManager(int fl_resid, Class fclass){
         Activity activity = getActivity();
         if(activity instanceof BaseActivity){
             BaseActivity baseActivity = (BaseActivity) activity;
-            baseActivity.fragmentManager(fl_resid, fclass, params);
+            baseActivity.fragmentManager(fl_resid, fclass);
         }
     }
 }

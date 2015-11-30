@@ -56,8 +56,8 @@ public class BaseActivity extends AppCompatActivity{
     /**
      * fragment管理
      */
-    public void fragmentManager(int fl_resid, Class fclass, Object... params){
-        fragmentManager(fl_resid, 0, 0, fclass, params);
+    public void fragmentManager(int fl_resid, Class fclass){
+        fragmentManager(fl_resid, 0, 0, fclass);
     }
 
     /**
@@ -66,9 +66,8 @@ public class BaseActivity extends AppCompatActivity{
      * @param fclass
      * @param inanim
      * @param outanim
-     * @param params
      */
-    public void fragmentManager(int fl_resid, int inanim, int outanim, Class fclass,  Object... params){
+    public void fragmentManager(int fl_resid, int inanim, int outanim, Class fclass){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if(inanim != 0 || outanim != 0){
             fragmentTransaction.setCustomAnimations(inanim, outanim);
@@ -81,7 +80,7 @@ public class BaseActivity extends AppCompatActivity{
             fragmentTransaction.show(fragment);
             showFragment = fragment;
         } else {
-            BaseFragment baseFragment = BaseFragment.getInstance(fclass, params);
+            BaseFragment baseFragment = BaseFragment.getInstance(fclass);
             fragmentTransaction.add(fl_resid, baseFragment, baseFragment.getFTag());
             fragmentMap.put(fclass.getName(), baseFragment.getFTag());
         }

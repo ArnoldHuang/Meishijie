@@ -17,7 +17,7 @@ import com.android.volley.toolbox.Volley;
  */
 public class VolleyUtil {
 
-    public static RequestQueue requestQueue;
+    private static RequestQueue requestQueue;
 
     public static void initVolley(Context context){
         if(requestQueue == null){

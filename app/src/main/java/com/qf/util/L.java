@@ -13,18 +13,19 @@ public class L {
 	/** 日志输出级别NONE */
 	public static final int LEVEL_ALL = 7;
 
+	/** 日志输出级别S,自定义定义的一个级别 */
+	public static final int LEVEL_SYSTEM = 6;
 	/** 日志输出级别V */
-	public static final int LEVEL_VERBOSE = 1;
+	public static final int LEVEL_VERBOSE = 5;
 	/** 日志输出级别D */
-	public static final int LEVEL_DEBUG = 2;
+	public static final int LEVEL_DEBUG = 4;
 	/** 日志输出级别I */
 	public static final int LEVEL_INFO = 3;
 	/** 日志输出级别W */
-	public static final int LEVEL_WARN = 4;
+	public static final int LEVEL_WARN = 2;
 	/** 日志输出级别E */
-	public static final int LEVEL_ERROR = 5;
-	/** 日志输出级别S,自定义定义的一个级别 */
-	public static final int LEVEL_SYSTEM = 6;
+	public static final int LEVEL_ERROR = 1;
+
 
 	/** 是否允许输出log */
 	private static int mDebuggable = LEVEL_ALL;
@@ -84,20 +85,6 @@ public class L {
 		}
 	}
 
-	/** 以级别为 s 的形式输出LOG,主要是为了System.out.println,稍微格式化了一下 */
-	public static void sf(String msg) {
-		if (mDebuggable >= LEVEL_ERROR) {
-			System.out.println("----------" + msg + "----------");
-		}
-	}
-
-	/** 以级别为 s 的形式输出LOG,主要是为了System.out.println */
-	public static void s(String msg) {
-		if (mDebuggable >= LEVEL_ERROR) {
-			System.out.println(msg);
-		}
-	}
-
 	/** 以级别为 e 的形式输出Throwable */
 	public static void e(Throwable tr) {
 		if (mDebuggable >= LEVEL_ERROR) {
@@ -109,6 +96,20 @@ public class L {
 	public static void e(String msg, Throwable tr) {
 		if (mDebuggable >= LEVEL_ERROR && null != msg) {
 			Log.e(mTag, msg, tr);
+		}
+	}
+
+	/** 以级别为 s 的形式输出LOG,主要是为了System.out.println,稍微格式化了一下 */
+	public static void sf(String msg) {
+		if (mDebuggable >= LEVEL_SYSTEM) {
+			System.out.println("----------" + msg + "----------");
+		}
+	}
+
+	/** 以级别为 s 的形式输出LOG,主要是为了System.out.println */
+	public static void s(String msg) {
+		if (mDebuggable >= LEVEL_SYSTEM) {
+			System.out.println(msg);
 		}
 	}
 
