@@ -145,6 +145,7 @@ public class RecommentNavView extends LinearLayout implements ViewPager.OnPageCh
                 @Override
                 public void run() {
                     selectTimerByPosition(index);
+                    vp_id.setCurrentItem(index*events);
                 }
             });
         }
@@ -323,9 +324,6 @@ public class RecommentNavView extends LinearLayout implements ViewPager.OnPageCh
                 iv.setVisibility(VISIBLE);
                 tv.setTextColor(Color.parseColor("#ffff0000"));
                 this.setTag("checked");
-
-                //设置ViewPager
-                vp_id.setCurrentItem(positions[0]);
             }
         }
 
@@ -340,25 +338,11 @@ public class RecommentNavView extends LinearLayout implements ViewPager.OnPageCh
             }
         }
 
-        /**
-         * 判断菜谱的下标是否属于该时间段
-         * @param index
-         */
-        public boolean isCheckedByPosititon(int index){
-            if(positions != null && positions.length > 0){
-                for(int i = 0; i < events; i++){
-                    if(positions[i] == index){
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-
         @Override
         public void onClick(View v) {
             if(getTag() == null || !getTag().equals("checked")) {
                 selectTimerByPosition(position);
+                vp_id.setCurrentItem(position * events);
             }
         }
     }
