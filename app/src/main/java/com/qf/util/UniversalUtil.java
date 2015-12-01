@@ -37,7 +37,7 @@ public class UniversalUtil {
         //DisplayImageOptions options1 = DisplayImageOptions.createSimple();
 
         options = new DisplayImageOptions.Builder()
-                .showImageOnLoading(R.mipmap.ic_launcher)// 加载等待 时显示的图片
+                .showImageOnLoading(R.drawable.imgbg)// 加载等待 时显示的图片
                 .showImageForEmptyUri(R.mipmap.ic_launcher)// 加载数据为空时显示的图片
                 .showImageOnFail(R.mipmap.ic_launcher)// 加载失败时显示的图片
                 .resetViewBeforeLoading(true)//加载前是否重置View

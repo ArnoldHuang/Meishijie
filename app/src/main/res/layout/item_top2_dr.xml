@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:gravity="center_horizontal">
+
+    <!-- 图片 -->
+    <com.qf.custemview.CircleImageView
+        android:id="@+id/iv_dr_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <!-- 名称 -->
+    <TextView
+        android:id="@+id/tv_dr_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+
+    <!-- 菜谱数量 -->
+    <TextView
+        android:id="@+id/tv_dr_cp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textSize="10sp"/>
+
+    <!-- 等级 -->
+    <TextView
+        android:id="@+id/tv_dr_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#88888888"/>
+
+</LinearLayout>

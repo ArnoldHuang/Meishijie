@@ -39,10 +39,9 @@ public class RecommentNavFragment extends BaseFragment<RecmentEntity.SanCan>{
      * @return
      */
     @Override
-    public Bundle setDatas(RecmentEntity.SanCan... sanCans) {
-        RecmentEntity.SanCan sancan = sanCans[0];
+    public Bundle setDatas(RecmentEntity.SanCan sanCans) {
         Bundle bundle = new Bundle();
-        bundle.putSerializable(DATA_KEY, sancan);
+        bundle.putSerializable(DATA_KEY, sanCans);
         return bundle;
     }
 

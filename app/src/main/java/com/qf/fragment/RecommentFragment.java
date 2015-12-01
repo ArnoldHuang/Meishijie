@@ -1,12 +1,12 @@
 package com.qf.fragment;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.android.volley.VolleyError;
 import com.qf.base.BaseFragment;
 import com.qf.custemview.RecommentNavView;
+import com.qf.custemview.RecommentTop2View;
 import com.qf.meishijie.R;
 import com.qf.model.RecmentEntity;
 import com.qf.util.Constants;
@@ -32,6 +32,11 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
      */
     private RecommentNavView recommentNavView;
 
+    /**
+     * 推荐食材 达人 菜单 模块
+     */
+    private RecommentTop2View recommentTop2View;
+
     @ViewInject(R.id.ll_main)
     private LinearLayout llayout;
 
@@ -43,6 +48,9 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
     protected void init(View view) {
         recommentNavView = new RecommentNavView(getActivity(), getFragmentManager());
         llayout.addView(recommentNavView);
+
+        recommentTop2View = new RecommentTop2View(getActivity(), getFragmentManager());
+        llayout.addView(recommentTop2View);
     }
 
     /**
@@ -63,8 +71,11 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
     public void response(String url, String response) {
         if(response != null){
             recmentEntity = JsonUtil.getRDataByJSON(response);
+            //设置头部的菜谱缩略图数据
             recommentNavView.setDatas(recmentEntity);
-        }
+            //推荐达人的控件
+            recommentTop2View.setDatas(recmentEntity);
+         }
     }
 
     @Override

@@ -54,7 +54,7 @@ public class BaseFragment<K> extends Fragment{
      * @param ks
      * @return
      */
-    public BaseFragment bindDatas(K... ks){
+    public BaseFragment bindDatas(K ks){
         Bundle bundle = setDatas(ks);
         this.setArguments(bundle);
         return this;
@@ -64,7 +64,7 @@ public class BaseFragment<K> extends Fragment{
      * 传递给Fragment参数的方法 -- 由子类重写
      * @return
      */
-    public Bundle setDatas(K... ks){
+    public Bundle setDatas(K ks){
         return null;
     }
 

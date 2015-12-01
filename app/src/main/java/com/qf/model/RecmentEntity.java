@@ -1,6 +1,7 @@
 package com.qf.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -90,12 +91,12 @@ public class RecmentEntity{
     /**
      * 首页 精选活动 推荐食材等viewpager数据
      */
-    public class Top2{
+    public class Top2 implements Serializable{
         private String title;
         private int type;
-        private List<TopObj> obj;
+        private ArrayList<TopObj> obj;
 
-        public class TopObj{
+        public class TopObj implements Serializable{
             //精选活动
             private String title;
             private String descr;
@@ -238,6 +239,30 @@ public class RecmentEntity{
             public void setUser_name(String user_name) {
                 this.user_name = user_name;
             }
+        }
+
+        public void setObj(ArrayList<TopObj> obj) {
+            this.obj = obj;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public void setType(int type) {
+            this.type = type;
+        }
+
+        public ArrayList<TopObj> getObj() {
+            return obj;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public int getType() {
+            return type;
         }
     }
 
