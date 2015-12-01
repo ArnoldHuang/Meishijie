@@ -9,15 +9,15 @@
     <!-- 图片 -->
     <com.qf.custemview.CircleImageView
         android:id="@+id/iv_dr_pic"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_width="@dimen/image_sc_wh"
+        android:layout_height="@dimen/image_sc_wh" />
 
     <!-- 名称 -->
     <TextView
         android:id="@+id/tv_dr_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"/>
+        android:textSize="@dimen/sc_title_size"/>
 
     <!-- 菜谱数量 -->
     <TextView
@@ -25,14 +25,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#f00"
-        android:textSize="10sp"/>
+        android:textSize="@dimen/sc_title_m_size"/>
 
     <!-- 等级 -->
     <TextView
         android:id="@+id/tv_dr_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
+        android:textSize="@dimen/sc_title_size"
         android:textColor="#88888888"/>
 
 </LinearLayout>

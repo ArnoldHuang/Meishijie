@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/ll_timeid"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/tab_h"
         android:orientation="horizontal"/>
 
 
@@ -17,7 +17,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_id"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/image_b_h"
         />
 
     <!--缩略图-->

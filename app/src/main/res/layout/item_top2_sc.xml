@@ -9,15 +9,15 @@
     <!-- 图片 -->
     <com.qf.custemview.CircleImageView
         android:id="@+id/iv_sc_pic"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_width="@dimen/image_sc_wh"
+        android:layout_height="@dimen/image_sc_wh" />
 
     <!-- 名称 -->
     <TextView
         android:id="@+id/tv_sc_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"/>
+        android:textSize="@dimen/sc_title_size"/>
 
     <!-- 热量 -->
     <LinearLayout
@@ -28,14 +28,14 @@
 
         <ImageView
             android:id="@+id/iv_sc_rl_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="@dimen/image_rl_wh"
+            android:layout_height="@dimen/image_rl_wh" />
 
         <TextView
             android:id="@+id/tv_sc_rl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10sp"/>
+            android:textSize="@dimen/sc_title_m_size"/>
 
     </LinearLayout>
 
@@ -44,7 +44,7 @@
         android:id="@+id/tv_sc_gx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
+        android:textSize="@dimen/sc_title_size"
         android:textColor="#88888888"/>
 
 </LinearLayout>

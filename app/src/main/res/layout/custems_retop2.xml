@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -8,6 +9,16 @@
         android:id="@+id/vp_top2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+    <com.qf.custemview.NavView
+        android:id="@+id/nav_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="5dp"
+        app:checked="@drawable/recipes_select_true"
+        app:unchecked="@drawable/recipes_select_false"
+        />
 
     <!--<android.support.v4.view.ViewPager-->
         <!--android:id="@+id/vp_top2"-->

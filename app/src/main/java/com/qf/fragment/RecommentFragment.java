@@ -46,9 +46,11 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
      */
     @Override
     protected void init(View view) {
+        //初始化缩略图封装组件
         recommentNavView = new RecommentNavView(getActivity(), getFragmentManager());
         llayout.addView(recommentNavView);
 
+        //初始化推荐模块封装组件
         recommentTop2View = new RecommentTop2View(getActivity(), getFragmentManager());
         llayout.addView(recommentTop2View);
     }
@@ -71,10 +73,12 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
     public void response(String url, String response) {
         if(response != null){
             recmentEntity = JsonUtil.getRDataByJSON(response);
-            //设置头部的菜谱缩略图数据
-            recommentNavView.setDatas(recmentEntity);
-            //推荐达人的控件
-            recommentTop2View.setDatas(recmentEntity);
+            if(recmentEntity != null) {
+                //设置头部的菜谱缩略图数据
+                recommentNavView.setDatas(recmentEntity);
+                //推荐达人的控件
+                recommentTop2View.setDatas(recmentEntity);
+            }
          }
     }
 

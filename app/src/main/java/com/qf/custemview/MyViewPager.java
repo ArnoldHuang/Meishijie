@@ -1,16 +1,14 @@
 package com.qf.custemview;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
-
 import com.qf.util.L;
 
 /**
  *
  */
-public class MyViewPager extends ViewPager{
+public class MyViewPager extends LoopViewPager{
 
     private int height = 0;
 
@@ -29,7 +27,6 @@ public class MyViewPager extends ViewPager{
         }
 
         heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.AT_MOST);
-        L.d(getChildCount() + "  测量的高度：" + height);
 
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }

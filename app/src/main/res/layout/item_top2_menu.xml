@@ -13,14 +13,13 @@
 
         <ImageView
             android:id="@+id/iv_menu_pic"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#f00"
+            android:layout_width="@dimen/image_menu_wh"
+            android:layout_height="@dimen/image_menu_wh"
             />
 
         <LinearLayout
-            android:layout_width="50dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/image_m_ll_w"
+            android:layout_height="@dimen/image_m_ll_h"
             android:orientation="horizontal">
 
             <ImageView
@@ -43,14 +42,14 @@
         android:id="@+id/tv_menu_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"/>
+        android:textSize="@dimen/menu_title_size"/>
 
     <!-- 功效 -->
     <TextView
         android:id="@+id/tv_menu_descr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
+        android:textSize="@dimen/menu_gx_size"
         android:textColor="#f00"/>
 
 </LinearLayout>

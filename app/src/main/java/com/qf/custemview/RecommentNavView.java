@@ -123,7 +123,6 @@ public class RecommentNavView extends LinearLayout implements ViewPager.OnPageCh
             //获取当前事件
             Calendar calendar = Calendar.getInstance();
             int hour = calendar.get(Calendar.HOUR_OF_DAY);//获取当前时间 -- 小时
-            L.d("--->当前时间：" + hour);
 
             for(int i = 0; i < tabTitles.size(); i++){
                 if(i < times.length){
@@ -296,7 +295,7 @@ public class RecommentNavView extends LinearLayout implements ViewPager.OnPageCh
             this.setOnClickListener(this);
 
             //设置tab的图片
-            layoutParams = new LinearLayout.LayoutParams(30, 30);
+            layoutParams = new LinearLayout.LayoutParams((int)getResources().getDimension(R.dimen.tab_img_wh), (int)getResources().getDimension(R.dimen.tab_img_wh));
             iv = new ImageView(getContext());
             iv.setLayoutParams(layoutParams);
             iv.setScaleType(ImageView.ScaleType.FIT_XY);
@@ -306,12 +305,13 @@ public class RecommentNavView extends LinearLayout implements ViewPager.OnPageCh
 
 
             //设置tab的文本
+            layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             tv = new TextView(getContext());
             tv.setGravity(Gravity.CENTER);
             tv.setLayoutParams(layoutParams);
             tv.setText(tabTitle.getTitle());
             tv.setSingleLine();
-            tv.setTextSize(10);
+            tv.setTextSize(getResources().getDimension(R.dimen.tab_text_size));
             tv.setTextColor(Color.parseColor("#55888888"));
             this.addView(tv);
         }
