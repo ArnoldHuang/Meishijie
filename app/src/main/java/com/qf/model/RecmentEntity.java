@@ -5,13 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 推荐页数据实体类
+ * 推荐页(首页)数据实体类
  */
 public class RecmentEntity{
 
     private List<TabTitle> san_can_titles;
     private List<SanCan> san_can;
     private List<Top2> top2;
+    private Top4 top4;
+    private List<Shop> shops;
 
     /**
      * 首页顶部时间段tab -- 早餐 午餐等等 那个东西
@@ -268,6 +270,108 @@ public class RecmentEntity{
 
 
     /**
+     * 首页 广告位 数据实体
+     */
+    public class Top4 implements Serializable{
+        private String photo;
+        private int click_type;
+        private String click_obj;
+
+        public String getClick_obj() {
+            return click_obj;
+        }
+
+        public void setClick_obj(String click_obj) {
+            this.click_obj = click_obj;
+        }
+
+        public int getClick_type() {
+            return click_type;
+        }
+
+        public void setClick_type(int click_type) {
+            this.click_type = click_type;
+        }
+
+        public String getPhoto() {
+            return photo;
+        }
+
+        public void setPhoto(String photo) {
+            this.photo = photo;
+        }
+    }
+
+    /**
+     * 首页 正在抢购模块 数据实体
+     */
+    public class Shop implements Serializable {
+        private String category;
+        private String id;
+        private String title;
+        private String desc;
+        private String image;
+        private long start_time;
+        private long left_time;
+
+        public String getCategory() {
+            return category;
+        }
+
+        public void setCategory(String category) {
+            this.category = category;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public void setDesc(String desc) {
+            this.desc = desc;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
+        }
+
+        public long getLeft_time() {
+            return left_time;
+        }
+
+        public void setLeft_time(long left_time) {
+            this.left_time = left_time;
+        }
+
+        public long getStart_time() {
+            return start_time;
+        }
+
+        public void setStart_time(long start_time) {
+            this.start_time = start_time;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+    }
+
+    /**
      * set 和 get方法
      * @return
      */
@@ -293,5 +397,21 @@ public class RecmentEntity{
 
     public void setTop2(List<Top2> top2) {
         this.top2 = top2;
+    }
+
+    public Top4 getTop4() {
+        return top4;
+    }
+
+    public void setTop4(Top4 top4) {
+        this.top4 = top4;
+    }
+
+    public List<Shop> getShops() {
+        return shops;
+    }
+
+    public void setShops(List<Shop> shops) {
+        this.shops = shops;
     }
 }

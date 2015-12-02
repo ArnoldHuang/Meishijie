@@ -1,0 +1,55 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 通用字体 -->
+    <dimen name="text_big_size">20sp</dimen>
+    <dimen name="text_mid_size">15sp</dimen>
+    <dimen name="text_xmid_size">12sp</dimen>
+    <dimen name="text_low_size">10sp</dimen>
+    <dimen name="text_xlow_size">8sp</dimen>
+
+    <!-- 导航小图标 图片的宽高 -->
+    <dimen name="nav_img_wh">12dp</dimen>
+
+    <!-- 推荐页 时间段tab的高度 -->
+    <dimen name="tab_h">40dp</dimen>
+    <!-- 推荐页 时间段tab的图标宽高 -->
+    <dimen name="tab_img_wh">15dp</dimen>
+    <!-- 推荐页 时间段tab的字体大小 -->
+    <dimen name="tab_text_size">4sp</dimen>
+
+    <!-- 推荐页 大图ViewPager高度 -->
+    <dimen name="image_b_h">200dp</dimen>
+    <!-- 推荐页 大图菜谱名称文字大小 -->
+    <dimen name="image_b_name_size">16sp</dimen>
+    <!-- 推荐页 大图菜谱描述文字大小 -->
+    <dimen name="image_b_cont_size">12sp</dimen>
+    <!-- 推荐页 缩略图的宽高 -->
+    <dimen name="image_m_wh">75dp</dimen>
+
+
+    <!-- 推荐页 食材、达人、菜单总标题字体大小 -->
+    <dimen name="atitle_size">@dimen/text_xmid_size</dimen>
+    <!-- 推荐页 推荐食材，推荐达人 图片宽高 -->
+    <dimen name="image_sc_wh">60dp</dimen>
+    <!-- 推荐页 推荐食材 热量标签图片宽高 -->
+    <dimen name="image_rl_wh">10dp</dimen>
+
+    <!-- 推荐页 食材 达人 标题、标签字体大小 -->
+    <dimen name="sc_title_size">@dimen/text_xmid_size</dimen>
+    <!-- 推荐页 食材 达人 小标题字体大小 -->
+    <dimen name="sc_title_m_size">@dimen/text_low_size</dimen>
+
+    <!-- 推荐页 推荐菜谱 图片宽高 -->
+    <dimen name="image_menu_wh">50dp</dimen>
+    <!-- 推荐页 推荐菜谱 小图LinearLayout的宽度 -->
+    <dimen name="image_m_ll_w">@dimen/image_menu_wh</dimen>
+    <!-- 推荐页 推荐菜谱 小图LinearLayout的高度 -->
+    <dimen name="image_m_ll_h">25dp</dimen>
+    <!-- 推荐页 推荐菜谱 标题文字大小 -->
+    <dimen name="menu_title_size">@dimen/text_xmid_size</dimen>
+    <!-- 推荐页 推荐菜谱 功效字体大小 -->
+    <dimen name="menu_gx_size">@dimen/text_low_size</dimen>
+</resources>

@@ -17,7 +17,9 @@
         android:id="@+id/tv_dr_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sc_title_size"/>
+        android:textSize="@dimen/sc_title_size"
+        android:singleLine="true"
+        android:ellipsize="end"/>
 
     <!-- 菜谱数量 -->
     <TextView

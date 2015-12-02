@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <com.qf.custemview.MyViewPager
-        android:id="@+id/vp_top2"
+        android:id="@+id/vp_shop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <com.qf.custemview.NavView
-        android:id="@+id/nav_id"
+        android:id="@+id/nav_shop_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
@@ -19,10 +18,5 @@
         app:checked="@drawable/recipes_select_true"
         app:unchecked="@drawable/recipes_select_false"
         />
-
-    <!--<android.support.v4.view.ViewPager-->
-        <!--android:id="@+id/vp_top2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="400dp"/>-->
 
 </FrameLayout>

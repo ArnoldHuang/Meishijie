@@ -1,6 +1,9 @@
 package com.qf.fragment;
 
+import android.graphics.Color;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.android.volley.VolleyError;
@@ -11,6 +14,8 @@ import com.qf.meishijie.R;
 import com.qf.model.RecmentEntity;
 import com.qf.util.Constants;
 import com.qf.util.JsonUtil;
+import com.qf.util.L;
+import com.qf.util.UniversalUtil;
 import com.qf.util.VolleyUtil;
 
 import org.xutils.view.annotation.ContentView;
@@ -37,6 +42,11 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
      */
     private RecommentTop2View recommentTop2View;
 
+    /**
+     * 广告栏目
+     */
+    private ImageView gliv;
+
     @ViewInject(R.id.ll_main)
     private LinearLayout llayout;
 
@@ -53,6 +63,12 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
         //初始化推荐模块封装组件
         recommentTop2View = new RecommentTop2View(getActivity(), getFragmentManager());
         llayout.addView(recommentTop2View);
+
+        //初始化广告ImageView
+        gliv = new ImageView(getContext());
+        gliv.setScaleType(ImageView.ScaleType.FIT_XY);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        llayout.addView(gliv, layoutParams);
     }
 
     /**
@@ -78,6 +94,8 @@ public class RecommentFragment extends BaseFragment implements VolleyUtil.OnRequ
                 recommentNavView.setDatas(recmentEntity);
                 //推荐达人的控件
                 recommentTop2View.setDatas(recmentEntity);
+                //设置广告的控件
+                UniversalUtil.displayImage(recmentEntity.getTop4().getPhoto(), gliv, null);
             }
          }
     }

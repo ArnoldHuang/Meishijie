@@ -1,6 +1,9 @@
 package com.qf.fragment;
 
 
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -55,6 +58,8 @@ public class RecommentNavFragment extends BaseFragment<RecmentEntity.SanCan>{
         if(sancan != null){
             //获得参数后设置到控件上
             UniversalUtil.displayImage(sancan.getTitlepic(), iv, null);
+            //给大图略微加上暗色，让白色字体更明显
+            iv.setColorFilter(Color.parseColor("#eedddddd"), PorterDuff.Mode.MULTIPLY);
             tv_title.setText(sancan.getTitle());
             tv_cont.setText(sancan.getDescr());
         }

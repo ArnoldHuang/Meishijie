@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.qf.base.BaseActivity;
 import com.qf.fragment.RecommentFragment;
+import com.qf.util.L;
 import com.qf.util.UniversalUtil;
 
 import org.xutils.view.annotation.ContentView;
@@ -30,6 +31,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void init() {
         rb_recom.performClick();
+        L.d("屏幕宽高：" + getResources().getDisplayMetrics().widthPixels + "   " + getResources().getDisplayMetrics().heightPixels);
     }
 
     /**
